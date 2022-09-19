@@ -14,6 +14,7 @@
 		9A6BDC3C28D5AD7B007EB9F9 /* dropInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BDC3B28D5AD7B007EB9F9 /* dropInTests.swift */; };
 		9A6BDC4628D5AD7B007EB9F9 /* dropInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BDC4528D5AD7B007EB9F9 /* dropInUITests.swift */; };
 		9A6BDC4828D5AD7B007EB9F9 /* dropInUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BDC4728D5AD7B007EB9F9 /* dropInUITestsLaunchTests.swift */; };
+		9A6BDC5528D83213007EB9F9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BDC5428D83213007EB9F9 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9A6BDC4128D5AD7B007EB9F9 /* dropInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dropInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6BDC4528D5AD7B007EB9F9 /* dropInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropInUITests.swift; sourceTree = "<group>"; };
 		9A6BDC4728D5AD7B007EB9F9 /* dropInUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropInUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A6BDC5428D83213007EB9F9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9A6BDC2928D5AD7A007EB9F9 /* dropInApp.swift */,
+				9A6BDC5428D83213007EB9F9 /* WelcomeView.swift */,
 				9A6BDC2B28D5AD7A007EB9F9 /* ContentView.swift */,
 				9A6BDC2D28D5AD7B007EB9F9 /* Assets.xcassets */,
 				9A6BDC2F28D5AD7B007EB9F9 /* dropIn.entitlements */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A6BDC2C28D5AD7A007EB9F9 /* ContentView.swift in Sources */,
+				9A6BDC5528D83213007EB9F9 /* WelcomeView.swift in Sources */,
 				9A6BDC2A28D5AD7A007EB9F9 /* dropInApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
