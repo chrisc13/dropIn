@@ -21,6 +21,13 @@
 		9ACDD68428DBA06900A150CD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9ACDD68328DBA06900A150CD /* FirebaseDatabase */; };
 		9ACDD68628DBA06900A150CD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9ACDD68528DBA06900A150CD /* FirebaseFirestore */; };
 		9ACDD68828DBA06900A150CD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9ACDD68728DBA06900A150CD /* FirebaseStorage */; };
+		9ACDD68B28DBAA3D00A150CD /* SwiftUISegues in Frameworks */ = {isa = PBXBuildFile; productRef = 9ACDD68A28DBAA3D00A150CD /* SwiftUISegues */; };
+		9ACDD68D28DBAC2100A150CD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD68C28DBAC2100A150CD /* LoginView.swift */; };
+		9ACDD68E28DBAC2100A150CD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD68C28DBAC2100A150CD /* LoginView.swift */; };
+		9ACDD68F28DBAC2100A150CD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD68C28DBAC2100A150CD /* LoginView.swift */; };
+		9ACDD69128DC034700A150CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD69028DC034700A150CD /* HomeView.swift */; };
+		9ACDD69228DC034700A150CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD69028DC034700A150CD /* HomeView.swift */; };
+		9ACDD69328DC034700A150CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD69028DC034700A150CD /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +61,8 @@
 		9A6BDC4728D5AD7B007EB9F9 /* dropInUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropInUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A6BDC5428D83213007EB9F9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		9ACDD67C28DB9E5E00A150CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9ACDD68C28DBAC2100A150CD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9ACDD69028DC034700A150CD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACDD68B28DBAA3D00A150CD /* SwiftUISegues in Frameworks */,
 				9ACDD68428DBA06900A150CD /* FirebaseDatabase in Frameworks */,
 				9ACDD68628DBA06900A150CD /* FirebaseFirestore in Frameworks */,
 				9ACDD68028DBA06900A150CD /* FirebaseAnalytics in Frameworks */,
@@ -112,6 +122,8 @@
 				9ACDD67C28DB9E5E00A150CD /* GoogleService-Info.plist */,
 				9A6BDC2928D5AD7A007EB9F9 /* dropInApp.swift */,
 				9A6BDC5428D83213007EB9F9 /* WelcomeView.swift */,
+				9ACDD68C28DBAC2100A150CD /* LoginView.swift */,
+				9ACDD69028DC034700A150CD /* HomeView.swift */,
 				9A6BDC2B28D5AD7A007EB9F9 /* ContentView.swift */,
 				9A6BDC2D28D5AD7B007EB9F9 /* Assets.xcassets */,
 				9A6BDC2F28D5AD7B007EB9F9 /* dropIn.entitlements */,
@@ -167,6 +179,7 @@
 				9ACDD68328DBA06900A150CD /* FirebaseDatabase */,
 				9ACDD68528DBA06900A150CD /* FirebaseFirestore */,
 				9ACDD68728DBA06900A150CD /* FirebaseStorage */,
+				9ACDD68A28DBAA3D00A150CD /* SwiftUISegues */,
 			);
 			productName = dropIn;
 			productReference = 9A6BDC2628D5AD7A007EB9F9 /* dropIn.app */;
@@ -242,6 +255,7 @@
 			mainGroup = 9A6BDC1D28D5AD7A007EB9F9;
 			packageReferences = (
 				9ACDD67E28DBA06900A150CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9ACDD68928DBAA3D00A150CD /* XCRemoteSwiftPackageReference "swiftui-segues" */,
 			);
 			productRefGroup = 9A6BDC2728D5AD7A007EB9F9 /* Products */;
 			projectDirPath = "";
@@ -288,6 +302,8 @@
 			files = (
 				9A6BDC2C28D5AD7A007EB9F9 /* ContentView.swift in Sources */,
 				9A6BDC5528D83213007EB9F9 /* WelcomeView.swift in Sources */,
+				9ACDD68D28DBAC2100A150CD /* LoginView.swift in Sources */,
+				9ACDD69128DC034700A150CD /* HomeView.swift in Sources */,
 				9A6BDC2A28D5AD7A007EB9F9 /* dropInApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACDD69228DC034700A150CD /* HomeView.swift in Sources */,
+				9ACDD68E28DBAC2100A150CD /* LoginView.swift in Sources */,
 				9A6BDC3C28D5AD7B007EB9F9 /* dropInTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACDD68F28DBAC2100A150CD /* LoginView.swift in Sources */,
+				9ACDD69328DC034700A150CD /* HomeView.swift in Sources */,
 				9A6BDC4828D5AD7B007EB9F9 /* dropInUITestsLaunchTests.swift in Sources */,
 				9A6BDC4628D5AD7B007EB9F9 /* dropInUITests.swift in Sources */,
 			);
@@ -650,6 +670,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		9ACDD68928DBAA3D00A150CD /* XCRemoteSwiftPackageReference "swiftui-segues" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-segues";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -677,6 +705,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9ACDD67E28DBA06900A150CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		9ACDD68A28DBAA3D00A150CD /* SwiftUISegues */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ACDD68928DBAA3D00A150CD /* XCRemoteSwiftPackageReference "swiftui-segues" */;
+			productName = SwiftUISegues;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
