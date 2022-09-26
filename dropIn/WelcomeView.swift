@@ -11,7 +11,8 @@ import SwiftUISegues
 struct WelcomeView: View {
     let welcomeMessage = "Welcome, interested in running a pickup game or joining a fun activity around you? Well, just drop in"
     enum Route: Hashable {
-           case segueToLoginView
+        case segueToLoginView
+        case segueToSignupView
        }
     @State private var route: Route? = nil
     var body: some View {
@@ -50,6 +51,7 @@ struct WelcomeView: View {
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 44)
                             .foregroundColor(Color.black)
                             Button("Sign Up") {
+                                route = .segueToSignupView
                             }
                             .frame(minWidth: 0, maxWidth: .infinity,  minHeight: 44)
                             .foregroundColor(Color.white)
@@ -72,6 +74,9 @@ struct WelcomeView: View {
             // Here are individual, mixed segues, with their destinations
             .segue(.push, tag: .segueToLoginView, selection: $route) {
                 LoginView()
+            }
+            .segue(.push, tag: .segueToSignupView, selection: $route) {
+                SignupView()
             }
         }
         .accentColor(.white)

@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomeView: View {
     var body: some View {
-        Text("Welcome DropIn User")
+        Text("welcome user")
     }
 }
 
