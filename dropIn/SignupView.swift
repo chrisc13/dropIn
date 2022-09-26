@@ -1,19 +1,19 @@
 //
-//  LoginView.swift
+//  SignupView.swift
 //  dropIn
 //
-//  Created by Chris Carbajal on 9/21/22.
+//  Created by Chris Carbajal on 9/22/22.
 //
 
 import SwiftUI
 import FirebaseAuth
-import SwiftUISegues
 
-struct LoginView: View {
+struct SignupView: View {
     @State private var email: String = ""
+    @State private var username: String = ""
     @State private var password: String = ""
-    @State private var route: Route? = nil
     @State private var isSecured: Bool = true
+    @State private var route: Route? = nil
     
     enum Route: Hashable {
            case seguetoHomeView
@@ -22,13 +22,43 @@ struct LoginView: View {
         NavigationView{
             GeometryReader { geo in
                 VStack{
-                    Text("Log In")
+                    Text("Sign up")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                     Spacer()
+                    
                     VStack (spacing: 30){
+                        Button(action: {
+                            // Do something...
+                        }, label: {
+                            Image(systemName: "camera.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .padding(30)
+                                .frame(width: 100, height: 100)
+                                .foregroundColor(Color(hue: 1.0, saturation: 0.012, brightness: 0.036, opacity: 0.626))
+                        })
+                        .background(Color(hue: 1.0, saturation: 0.011, brightness: 0.809, opacity: 0.89))
+                        .clipShape(Circle())
+                        
+                       
+                        
                         VStack (spacing: 15){
+                            HStack{
+                                Image(systemName: "person")
+                                    .foregroundColor(.gray)
+                                SecureField(
+                                    "Username",
+                                    text: $username
+                                )
+                                .autocapitalization(.none)
+                                .disableAutocorrection(true)
+                            }
+                            .padding(10)
+                            .background(.white)
+                            .cornerRadius(5)
+                            
                             HStack{
                                 Image(systemName: "mail")
                                     .foregroundColor(.gray)
@@ -44,7 +74,7 @@ struct LoginView: View {
                             .background(.white)
                             .cornerRadius(5)
                             
-                            
+                        
                             HStack{
                                 Image(systemName: "lock")
                                     .foregroundColor(.gray)
@@ -68,8 +98,8 @@ struct LoginView: View {
                             .background(.white)
                             .cornerRadius(5)
                         }
-                        Button("Log in") {
-                            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                        Button("Sign up") {
+                            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                                 if error != nil {
                                     print(error?.localizedDescription ?? "")
                                 } else {
@@ -87,7 +117,7 @@ struct LoginView: View {
                     }
                     .padding(.horizontal, 20)
                     .padding(.bottom, 10.0)
-                    
+                    Spacer()
                     Spacer()
                 }
                 .frame(width: geo.size.width, height: geo.size.height)
@@ -100,8 +130,8 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct SignupView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        SignupView()
     }
 }
