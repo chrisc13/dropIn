@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseDatabase
 
 struct SignupView: View {
     @State private var email: String = ""
@@ -18,7 +19,9 @@ struct SignupView: View {
     enum Route: Hashable {
            case seguetoHomeView
        }
+    
     var body: some View {
+        let ref: DatabaseReference = Database.database().reference()
         NavigationView{
             GeometryReader { geo in
                 VStack{
@@ -48,7 +51,7 @@ struct SignupView: View {
                             HStack{
                                 Image(systemName: "person")
                                     .foregroundColor(.gray)
-                                SecureField(
+                                TextField(
                                     "Username",
                                     text: $username
                                 )
@@ -100,9 +103,19 @@ struct SignupView: View {
                         }
                         Button("Sign up") {
                             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                                
                                 if error != nil {
                                     print(error?.localizedDescription ?? "")
                                 } else {
+                                    let user = Auth.auth().currentUser
+                                    if let user = user {
+                                        let userInfoDictionary = ["username" : username,
+                                                                   "email" : email,
+                                                                   "profileImageURL" : "example.com"]
+                                        
+                                        ref.child("users").child(user.uid).setValue(userInfoDictionary)
+                                    }
+                                    
                                     UserDefaults.standard.set(true, forKey: "UserLoggedIn")
                                     route = .seguetoHomeView
                                 }
