@@ -31,6 +31,7 @@
 		9ACDD69528DD77DF00A150CD /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD69428DD77DF00A150CD /* SignupView.swift */; };
 		9ACDD69628DD77DF00A150CD /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD69428DD77DF00A150CD /* SignupView.swift */; };
 		9ACDD69728DD77DF00A150CD /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD69428DD77DF00A150CD /* SignupView.swift */; };
+		9ACDD69A28E5384500A150CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD69928E5384500A150CD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		9ACDD68C28DBAC2100A150CD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9ACDD69028DC034700A150CD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9ACDD69428DD77DF00A150CD /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		9ACDD69928E5384500A150CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +125,10 @@
 		9A6BDC2828D5AD7A007EB9F9 /* dropIn */ = {
 			isa = PBXGroup;
 			children = (
-				9ACDD67C28DB9E5E00A150CD /* GoogleService-Info.plist */,
 				9A6BDC2928D5AD7A007EB9F9 /* dropInApp.swift */,
-				9A6BDC5428D83213007EB9F9 /* WelcomeView.swift */,
-				9ACDD68C28DBAC2100A150CD /* LoginView.swift */,
-				9ACDD69428DD77DF00A150CD /* SignupView.swift */,
-				9ACDD69028DC034700A150CD /* HomeView.swift */,
-				9A6BDC2B28D5AD7A007EB9F9 /* ContentView.swift */,
+				9ACDD69B28E538B800A150CD /* View */,
+				9ACDD69828E5383000A150CD /* Model */,
+				9ACDD67C28DB9E5E00A150CD /* GoogleService-Info.plist */,
 				9A6BDC2D28D5AD7B007EB9F9 /* Assets.xcassets */,
 				9A6BDC2F28D5AD7B007EB9F9 /* dropIn.entitlements */,
 				9A6BDC3028D5AD7B007EB9F9 /* Preview Content */,
@@ -160,6 +159,26 @@
 				9A6BDC4728D5AD7B007EB9F9 /* dropInUITestsLaunchTests.swift */,
 			);
 			path = dropInUITests;
+			sourceTree = "<group>";
+		};
+		9ACDD69828E5383000A150CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9ACDD69928E5384500A150CD /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9ACDD69B28E538B800A150CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A6BDC5428D83213007EB9F9 /* WelcomeView.swift */,
+				9ACDD68C28DBAC2100A150CD /* LoginView.swift */,
+				9ACDD69428DD77DF00A150CD /* SignupView.swift */,
+				9ACDD69028DC034700A150CD /* HomeView.swift */,
+				9A6BDC2B28D5AD7A007EB9F9 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +330,7 @@
 				9ACDD68D28DBAC2100A150CD /* LoginView.swift in Sources */,
 				9ACDD69128DC034700A150CD /* HomeView.swift in Sources */,
 				9A6BDC2A28D5AD7A007EB9F9 /* dropInApp.swift in Sources */,
+				9ACDD69A28E5384500A150CD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

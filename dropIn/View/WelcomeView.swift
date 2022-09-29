@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUISegues
 
 struct WelcomeView: View {
-    let welcomeMessage = "Welcome, interested in running a pickup game or joining a fun activity around you? Well, just drop in"
+    let welcomeMessage = "Welcome, interested in running a pickup game or joining a fun activity around you? Well, just drop in..."
     enum Route: Hashable {
         case segueToLoginView
         case segueToSignupView

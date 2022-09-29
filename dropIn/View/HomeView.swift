@@ -7,9 +7,13 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseDatabase
 
 struct HomeView: View {
     var body: some View {
+        
+
+        
         Text("welcome user")
     }
 }
