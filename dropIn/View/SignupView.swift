@@ -116,7 +116,6 @@ struct SignupView: View {
                                         ref.child("users").child(user.uid).setValue(userInfoDictionary)
                                     }
                                     
-                                    UserDefaults.standard.set(true, forKey: "UserLoggedIn")
                                     route = .seguetoHomeView
                                 }
                             }
@@ -138,7 +137,7 @@ struct SignupView: View {
             }
         }
         .segue(.push, tag: .seguetoHomeView, selection: $route) {
-            HomeView()
+            MainView()
         }
     }
 }
