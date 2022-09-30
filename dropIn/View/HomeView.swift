@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseDatabase
 
 struct HomeView: View {
-
+    @State private var showingPopover = false
+    @StateObject private var eventManager = EventManager()
     var body: some View {
         GeometryReader { geo in
             VStack{
@@ -32,16 +34,27 @@ struct HomeView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding()
-                    HStack{
-                        CardView(card: Card.example)
-                        CardView(card: Card.example)
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 5) {
+                            if eventManager.events != nil {
+                                
+                                let events = eventManager.events!
+                                ForEach(events, id: \.uid) { event in
+                                    let card  = Card(img: event.sport.lowercased(), title: event.sport, subTitle: event.details, createdBy: event.username)
+                                    CardView(card: card)
+                                        .frame(width: 250, height: 250)
+                                    }
+                                
+                            }
+                            
+                        }
+                        
                     }
                     
                 }
                 .frame(width: geo.size.width, height: geo.size.height * 0.55)
                 
                 VStack{
-                    
                     Button("Join"){
                         
                     }
@@ -49,22 +62,25 @@ struct HomeView: View {
                     .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.1)
                     .background(Color(UIColor(red:0.22, green:0.24, blue:0.25, alpha:1.0)))
                     .cornerRadius(10)
-                   
-                    Button("Create"){
-                        
+                    Button("Create") {
+                               showingPopover = true
                     }
                     .foregroundColor(.white)
                     .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.1)
                     .background(Color(UIColor(red:0.22, green:0.24, blue:0.25, alpha:1.0)))
                     .cornerRadius(10)
-                    .padding(5)
-                
+                    .popover(isPresented: $showingPopover) {
+                        CreateEventView(isPresented: $showingPopover)
+                    }
                     
                 }
                 .frame(width: geo.size.width, height: geo.size.height * 0.45)
                 .padding(.bottom, 10)
-                Spacer()
+                
             }
+        }.onAppear{
+            eventManager.makeFirebaseCall()
+
         }
         
 

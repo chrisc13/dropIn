@@ -71,7 +71,7 @@ struct WelcomeView: View {
                         Spacer()
                             .frame(minHeight: 0, maxHeight: 30)
                         HStack(){
-                            Button("Login") {
+                            Button("Log In") {
                                 route = .segueToLoginView
                             }
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 44)

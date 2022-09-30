@@ -13,7 +13,7 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Image(systemName: "soccerball")
+                Image(systemName: card.img)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(15)
@@ -23,14 +23,17 @@ struct CardView: View {
                     VStack(alignment: .leading) {
                         Text(card.title)
                             .font(.headline)
+                            .minimumScaleFactor(0.6)
                             .foregroundColor(.secondary)
                         Text(card.subTitle)
                             .font(.title)
+                            .minimumScaleFactor(0.6)
                             .fontWeight(.black)
                             .foregroundColor(.primary)
                             .lineLimit(3)
                         Text(card.createdBy.uppercased())
                             .font(.caption)
+                            .minimumScaleFactor(0.6)
                             .foregroundColor(.secondary)
                     }
                     .layoutPriority(100)

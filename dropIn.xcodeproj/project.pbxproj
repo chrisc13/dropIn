@@ -50,6 +50,13 @@
 		9ACDD6B528E672D500A150CD /* NearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6B428E672D500A150CD /* NearbyView.swift */; };
 		9ACDD6B628E672D500A150CD /* NearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6B428E672D500A150CD /* NearbyView.swift */; };
 		9ACDD6B728E672D500A150CD /* NearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6B428E672D500A150CD /* NearbyView.swift */; };
+		9ACDD6BD28E6917000A150CD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6BC28E6917000A150CD /* Event.swift */; };
+		9ACDD6BE28E6917000A150CD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6BC28E6917000A150CD /* Event.swift */; };
+		9ACDD6BF28E6917000A150CD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6BC28E6917000A150CD /* Event.swift */; };
+		9ACDD6C128E6938E00A150CD /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6C028E6938E00A150CD /* CreateEventView.swift */; };
+		9ACDD6C228E6938E00A150CD /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6C028E6938E00A150CD /* CreateEventView.swift */; };
+		9ACDD6C328E6938E00A150CD /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6C028E6938E00A150CD /* CreateEventView.swift */; };
+		9ACDD6C528E74C4500A150CD /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACDD6C428E74C4500A150CD /* EventManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +100,9 @@
 		9ACDD6AC28E5533E00A150CD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9ACDD6B028E572B000A150CD /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		9ACDD6B428E672D500A150CD /* NearbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyView.swift; sourceTree = "<group>"; };
+		9ACDD6BC28E6917000A150CD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		9ACDD6C028E6938E00A150CD /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
+		9ACDD6C428E74C4500A150CD /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +201,8 @@
 				9ACDD6B028E572B000A150CD /* AuthManager.swift */,
 				9ACDD69928E5384500A150CD /* User.swift */,
 				9ACDD6AC28E5533E00A150CD /* Card.swift */,
+				9ACDD6BC28E6917000A150CD /* Event.swift */,
+				9ACDD6C428E74C4500A150CD /* EventManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +219,7 @@
 				9ACDD69C28E5473C00A150CD /* ProfileView.swift */,
 				9ACDD6A828E5531F00A150CD /* CardView.swift */,
 				9ACDD6B428E672D500A150CD /* NearbyView.swift */,
+				9ACDD6C028E6938E00A150CD /* CreateEventView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,8 +377,11 @@
 				9A6BDC2C28D5AD7A007EB9F9 /* ContentView.swift in Sources */,
 				9A6BDC5528D83213007EB9F9 /* WelcomeView.swift in Sources */,
 				9ACDD68D28DBAC2100A150CD /* LoginView.swift in Sources */,
+				9ACDD6C528E74C4500A150CD /* EventManager.swift in Sources */,
 				9A6BDC2A28D5AD7A007EB9F9 /* dropInApp.swift in Sources */,
 				9ACDD69A28E5384500A150CD /* User.swift in Sources */,
+				9ACDD6C128E6938E00A150CD /* CreateEventView.swift in Sources */,
+				9ACDD6BD28E6917000A150CD /* Event.swift in Sources */,
 				9ACDD6AD28E5533E00A150CD /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ACDD6AA28E5531F00A150CD /* CardView.swift in Sources */,
+				9ACDD6BE28E6917000A150CD /* Event.swift in Sources */,
 				9ACDD6B628E672D500A150CD /* NearbyView.swift in Sources */,
 				9ACDD6B228E572B000A150CD /* AuthManager.swift in Sources */,
 				9ACDD69628DD77DF00A150CD /* SignupView.swift in Sources */,
@@ -382,6 +399,7 @@
 				9ACDD68E28DBAC2100A150CD /* LoginView.swift in Sources */,
 				9ACDD6A628E547D300A150CD /* HomeView.swift in Sources */,
 				9ACDD6A228E547AD00A150CD /* MainView.swift in Sources */,
+				9ACDD6C228E6938E00A150CD /* CreateEventView.swift in Sources */,
 				9A6BDC3C28D5AD7B007EB9F9 /* dropInTests.swift in Sources */,
 				9ACDD6AE28E5533E00A150CD /* Card.swift in Sources */,
 			);
@@ -395,7 +413,9 @@
 				9ACDD68F28DBAC2100A150CD /* LoginView.swift in Sources */,
 				9ACDD6AF28E5533E00A150CD /* Card.swift in Sources */,
 				9ACDD6A728E547D300A150CD /* HomeView.swift in Sources */,
+				9ACDD6BF28E6917000A150CD /* Event.swift in Sources */,
 				9ACDD6A328E547AD00A150CD /* MainView.swift in Sources */,
+				9ACDD6C328E6938E00A150CD /* CreateEventView.swift in Sources */,
 				9A6BDC4828D5AD7B007EB9F9 /* dropInUITestsLaunchTests.swift in Sources */,
 				9A6BDC4628D5AD7B007EB9F9 /* dropInUITests.swift in Sources */,
 				9ACDD69F28E5473C00A150CD /* ProfileView.swift in Sources */,
