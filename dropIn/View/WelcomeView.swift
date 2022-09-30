@@ -23,7 +23,32 @@ struct WelcomeView: View {
                 VStack(spacing: 0) {
                     
                     //top view
-                    VStack() {
+                    VStack(){
+                        /*
+                        Spacer()
+                        HStack(){
+                            VStack{
+                                Image(systemName: "figure.soccer")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                Image(systemName: "figure.softball")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
+                            .padding(20)
+                            VStack{
+                                Image(systemName: "figure.tennis")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                Image(systemName: "figure.volleyball")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
+                            .padding(20)
+                        }
+                        .background()
+                        .cornerRadius(10)*/
+                        
                         Text("DropIn")
                             .font(.largeTitle)
                             .fontWeight(.heavy)
@@ -34,6 +59,7 @@ struct WelcomeView: View {
                     }
                     .frame(width: geo.size.width, height: geo.size.height * 0.7)
                     .background(Color(UIColor(red:0.22, green:0.24, blue:0.25, alpha:1.0)))
+                    
                     
                     //bottom view
                     VStack(alignment: .center, spacing: 0.0) {
@@ -69,7 +95,7 @@ struct WelcomeView: View {
                     
                 }
             }
-            .ignoresSafeArea()
+            
             
             // Here are individual, mixed segues, with their destinations
             .segue(.push, tag: .segueToLoginView, selection: $route) {

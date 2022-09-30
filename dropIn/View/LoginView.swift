@@ -73,7 +73,6 @@ struct LoginView: View {
                                 if error != nil {
                                     print(error?.localizedDescription ?? "")
                                 } else {
-                                    UserDefaults.standard.set(true, forKey: "UserLoggedIn")
                                     route = .seguetoHomeView
                                 }
                             }
@@ -95,7 +94,7 @@ struct LoginView: View {
             }
         }
         .segue(.push, tag: .seguetoHomeView, selection: $route) {
-            HomeView()
+            MainView()
         }
     }
 }
