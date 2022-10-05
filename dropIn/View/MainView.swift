@@ -12,8 +12,6 @@ struct MainView: View {
     var body: some View {
         
         TabView(selection: $selectedTab) {
-            
-            
                 HomeView()
                     .tabItem {
                         Label("Home", systemImage: "house.fill")
@@ -29,8 +27,11 @@ struct MainView: View {
                     .tabItem {
                         Label("Profile", systemImage: "person.fill")
                     }
-            
+                    .background(Color(UIColor(red:0.85, green:0.85, blue:0.85, alpha:1.0)))
                 .tag(2)
+        }
+        .onAppear(){
+            print("main tab parent")
         }
         .accentColor(.black)
     }

@@ -107,13 +107,10 @@ struct SignupView: View {
                                 if error != nil {
                                     print(error?.localizedDescription ?? "")
                                 } else {
-                                    let user = Auth.auth().currentUser
-                                    if let user = user {
-                                        let userInfoDictionary = ["username" : username,
-                                                                   "email" : email,
-                                                                   "profileImageURL" : "example.com"]
-                                        
-                                        ref.child("users").child(user.uid).setValue(userInfoDictionary)
+                                    let currentUser = Auth.auth().currentUser
+                                    if let currentUser = currentUser {
+                                        let user = User(username: username, email: email, profileImageURL: "example.com")
+                                        ref.child("users").child(currentUser.uid).setValue(user.getDictionary())
                                     }
                                     
                                     route = .seguetoHomeView
