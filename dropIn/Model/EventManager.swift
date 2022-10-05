@@ -9,10 +9,14 @@ import Foundation
 import FirebaseDatabase
 class EventManager : ObservableObject {
   @Published var events : [Event]?
-
+   // let ref : DatabaseReference!
   func makeFirebaseCall() {
+      /*if let ref = ref {
+          self.ref = Database.database().reference().child("events")
+      }*/
       let ref = Database.database().reference().child("events")
       ref.observe(.value, with: { snapshot in
+          print("made db")
           guard let dictionary = snapshot.value as? [String : AnyObject] else {
                 return
           }
@@ -24,9 +28,11 @@ class EventManager : ObservableObject {
           
           self.events = dbEvents
       })
-      
-    
   }
+    func removeFirebaseRef() {
+        //self.ref.unsu
+    }
+    
     func getDateFromString(date: String) -> Date?{
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"

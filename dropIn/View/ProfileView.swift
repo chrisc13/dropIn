@@ -75,7 +75,8 @@ struct ProfileView: View {
                 .padding(10)
             }
         }.onAppear{
-            eventManager.makeFirebaseCall()
+            print("rendered profile view")
+            //eventManager.makeFirebaseCall()
 
         }
     }

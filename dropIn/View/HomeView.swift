@@ -54,7 +54,7 @@ struct HomeView: View {
                 }
                 .frame(width: geo.size.width, height: geo.size.height * 0.55)
                 
-                VStack{
+                VStack(spacing: 15){
                     Button("Join"){
                         
                     }
@@ -65,6 +65,7 @@ struct HomeView: View {
                     Button("Create") {
                                showingPopover = true
                     }
+                    
                     .foregroundColor(.white)
                     .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.1)
                     .background(Color(UIColor(red:0.22, green:0.24, blue:0.25, alpha:1.0)))
@@ -79,8 +80,11 @@ struct HomeView: View {
                 
             }
         }.onAppear{
+            print("rendered home view")
             eventManager.makeFirebaseCall()
 
+        }.onDisappear(){
+            eventManager.removeFirebaseRef()
         }
         
 

@@ -216,9 +216,9 @@
 				9ACDD69428DD77DF00A150CD /* SignupView.swift */,
 				9ACDD6A028E547AD00A150CD /* MainView.swift */,
 				9ACDD6A428E547D300A150CD /* HomeView.swift */,
+				9ACDD6B428E672D500A150CD /* NearbyView.swift */,
 				9ACDD69C28E5473C00A150CD /* ProfileView.swift */,
 				9ACDD6A828E5531F00A150CD /* CardView.swift */,
-				9ACDD6B428E672D500A150CD /* NearbyView.swift */,
 				9ACDD6C028E6938E00A150CD /* CreateEventView.swift */,
 			);
 			path = View;

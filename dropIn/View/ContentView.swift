@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var authManager = AuthManager()
+    @StateObject var authManager = AuthManager()
     var body: some View {
         if authManager.isLoggedIn{
             MainView()

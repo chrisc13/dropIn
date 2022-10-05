@@ -43,10 +43,14 @@ struct NearbyView: View {
                    
                }
            }.onAppear{
-               eventManager.makeFirebaseCall()
+               print("rendered nearby view")
+               //getLocation()
+               //eventManager.makeFirebaseCall()
 
            }
        }
+               
+    
 }
 
 struct NearbyView_Previews: PreviewProvider {

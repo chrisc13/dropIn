@@ -23,40 +23,41 @@ struct CreateEventView: View {
                 .fontWeight(.bold)
             
             Form{
-                Grid {
-                    GridRow {
-                        Button(action: {
-                            print("soccer")
-                        }, label: {
-                            Image(systemName: "soccerball")
-                        })
-                        Button(action: {
-                            print("volley")
-                        }, label: {
-                            Image(systemName: "volleyball")
-                        })
-                    }
-                    
-                    .padding()
-                    Divider()
-                    GridRow {
-                        Button(action: {
-                            // Do something...
-                            print("football")
-                        }, label: {
-                            Image(systemName: "football")
-                        })
-                        Button(action: {
-                            // Do something...
-                            print("basket")
-                        }, label: {
-                            Image(systemName: "basketball")
-                        })
+                Section(header: Text("Choose Sport"))  {
+                    Grid {
+                        GridRow {
+                            Button(action: {
+                                print("soccer")
+                            }, label: {
+                                Image(systemName: "soccerball")
+                            })
+                            Button(action: {
+                                print("volley")
+                            }, label: {
+                                Image(systemName: "volleyball")
+                            })
+                        }
+                        
+                        .padding()
+                        Divider()
+                        GridRow {
+                            Button(action: {
+                                // Do something...
+                                print("football")
+                            }, label: {
+                                Image(systemName: "football")
+                            })
+                            Button(action: {
+                                // Do something...
+                                print("basket")
+                            }, label: {
+                                Image(systemName: "basketball")
+                            })
+                        }
                     }
                 }.foregroundColor(Color(hue: 1.0, saturation: 0.012, brightness: 0.036, opacity: 0.626))
             
-                Section{
-                    VStack(alignment: .leading, spacing: 20){
+                Section(header: Text("Sport Details"))  {
                         TextField(
                             "Location",
                             text: $location
@@ -69,11 +70,11 @@ struct CreateEventView: View {
                             "Details",
                             text: $details
                         )
-                    }
+                    
                 }
                 
                 
-                VStack(alignment: .leading, spacing: 20){
+                Section(header: Text("Location Details"))  {
                     TextField(
                         "Date",
                         text: $date
@@ -88,7 +89,7 @@ struct CreateEventView: View {
                     )
                 }
             }
-            HStack(spacing: 0){
+            HStack(alignment: .top , spacing: 0){
                 Button("Cancel") {
                     self.isPresented = false
                 }
